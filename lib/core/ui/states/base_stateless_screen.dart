@@ -8,15 +8,20 @@ abstract class BaseStatelessScreen extends BaseStatelessWidget {
   @override
   Widget getLayout(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        appBar: buildAppbar(context),
-        body: buildBody(context),
+      child: SingleChildScrollView(
+        child: Container(
+          height: MediaQuery.of(context).size.height*2,
+          width: MediaQuery.of(context).size.width,
+          child: Scaffold(
+            resizeToAvoidBottomPadding: false,
+            resizeToAvoidBottomInset: false,
+            body: buildBody(context),
+          ),
+        ),
       ),
     );
   }
 
-  /// should be overridden in extended widget
-  Widget buildAppbar(BuildContext context);
 
   /// should be overridden in extended widget
   Widget buildBody(BuildContext context);

@@ -76,13 +76,13 @@ class FirstScreenState extends State<FirstScreen> {
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(109, 11, 109, 11),
+                  padding: const EdgeInsets.fromLTRB(115, 11, 115, 11),
                   child: Text('Пропустити', style: TextStyles().style_1,),
                 ),
                 onPressed: () {
                   itemCarouselController.nextPage();
                   if(currentPos == listItems.length-1) {
-                    Get.toNamed('/authRoute');
+                    Get.toNamed('/phoneVerifyRoute');
                   }
                 }
               )

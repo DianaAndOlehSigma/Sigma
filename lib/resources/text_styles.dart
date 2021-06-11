@@ -37,7 +37,7 @@ class TextStyles{
       color: ColorsData().blue2,
       fontWeight: FontWeight.normal,
       fontSize: 12,
-      decoration: TextDecoration.none
+      decoration: TextDecoration.underline
   );
 
 }
