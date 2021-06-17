@@ -4,21 +4,22 @@ import 'package:flutter/material.dart';
 
 abstract class BaseStatelessScreen extends BaseStatelessWidget {
   BaseStatelessScreen({Key key}) : super(key: key);
+  final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget getLayout(BuildContext context) {
     return SafeArea(
-      child: SingleChildScrollView(
-        child: Container(
-          height: MediaQuery.of(context).size.height*2,
+      child:  Container(
+          height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Scaffold(
+            backgroundColor: Colors.transparent,
+            key: scaffoldKey,
             resizeToAvoidBottomPadding: false,
             resizeToAvoidBottomInset: false,
             body: buildBody(context),
           ),
         ),
-      ),
     );
   }
 

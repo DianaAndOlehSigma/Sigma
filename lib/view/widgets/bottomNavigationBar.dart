@@ -1,35 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
+import 'package:sigma/core/getX/base_controller.dart';
+import 'package:sigma/core/ui/states/base_stateless_screen.dart';
 import 'package:sigma/resources/colors.dart';
+import 'package:sigma/view/bottom_nav_bar_sceens/main_screen.dart';
 
-
-class MainBottomNavigationBar extends StatelessWidget{
-  final NavController navController = Get.put(NavController());
+ class MainBottomNavigationBar extends BaseStatelessScreen{
+  final BaseController navController = Get.put(BaseController());
 
   final List<Widget> bodyContent = [
-    Text('1'),
+    MainScreen(),
     Text('2'),
     Text('3'),
     Text('4'),
   ];
 
   @override
-  Widget build(BuildContext context) {
+  Widget buildBody(BuildContext context) {
     return Scaffold(
         body: Obx(
               () => Center(
-            child: bodyContent.elementAt(navController.selectedIndex),
+                child: bodyContent.elementAt(navController.selectedIndex),
           ),
         ),
         floatingActionButton: Container(
           height: 65,
           width: 65,
           child: FloatingActionButton(
-            backgroundColor: ColorsData().blue,
+            backgroundColor: blue,
             child: Padding(
               padding: const EdgeInsets.all(15),
-              child: Icon(Icons.qr_code, size: 30,),
+              child: Icon(Icons.qr_code, size: 25,),
             ),
             onPressed: () {},
           ),
@@ -39,13 +41,13 @@ class MainBottomNavigationBar extends StatelessWidget{
             () => Padding(
             padding: EdgeInsets.only(bottom: 0),
             child: BottomNavigationBar(
-              backgroundColor: ColorsData().blue1,
-              selectedItemColor: ColorsData().blue2,
-                unselectedItemColor: Colors.grey,
+              backgroundColor: blue1,
+              selectedItemColor: blue2,
+                unselectedItemColor: grey2,
                 currentIndex: navController.selectedIndex,
                 onTap: (index) => navController.selectedIndex = index,
                 type: BottomNavigationBarType.fixed,
-                iconSize: 25,
+                iconSize: 20,
              items: [
                BottomNavigationBarItem(
                  icon: Icon(Icons.home),
@@ -69,10 +71,4 @@ class MainBottomNavigationBar extends StatelessWidget{
         ),
     );
   }
-}
-class NavController extends GetxController {
-  final _selectedIndex = 0.obs;
-
-  get selectedIndex => _selectedIndex.value;
-  set selectedIndex(index) => _selectedIndex.value = index;
 }

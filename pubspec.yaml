@@ -29,6 +29,10 @@ dependencies:
   firebase_auth:
   firebase_core:
   cloud_firestore:
+  flutter_pin_code_fields:
+  sliding_up_panel:
+  syncfusion_flutter_charts:
+  flutter_native_splash:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -54,6 +58,14 @@ flutter:
     - assets/images/3.0x/home.png
     - assets/images/3.0x/refresh.png
     - assets/images/logo.png
+    - assets/images/fire.png
+    - assets/images/Clothes.png
+    - assets/images/Beauty.png
+    - assets/images/Delivery.png
+    - assets/images/MarketPlace.png
+    - assets/images/Travel.png
+    - assets/images/Shop.png
+    - assets/images/info.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
