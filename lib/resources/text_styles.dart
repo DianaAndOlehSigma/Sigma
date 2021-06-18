@@ -103,3 +103,8 @@ TextStyle style_15 = GoogleFonts.openSans(
   fontWeight: FontWeight.normal,
   fontSize: 16,
 );
+TextStyle style_16 = GoogleFonts.openSans(
+  color: white,
+  fontWeight: FontWeight.bold,
+  fontSize: 20,
+);

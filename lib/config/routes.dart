@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:sigma/view/bottom_nav_bar_sceens/product_detail_sceen.dart';
+import 'package:sigma/view/filter_product_screen.dart';
+import 'package:sigma/view/product_detail_sceen.dart';
 import 'package:sigma/view/log_in/phone_verify_screen.dart';
 import 'package:sigma/view/log_in/first_screen.dart';
 import 'package:sigma/view/bottom_nav_bar_sceens/main_screen.dart';
@@ -17,5 +18,6 @@ class AppPages{
     GetPage(name: '/smsRoute', page: () => SmsScreen()),
     GetPage(name: '/bottomNavigationBarRoute', page: () => MainBottomNavigationBar()),
     GetPage(name: '/productDetailRoute', page: () => ProductDetailScreen()),
+    GetPage(name: '/filterProductRoute', page: () => FilterProductScreen()),
   ];
 }

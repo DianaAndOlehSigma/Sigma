@@ -5,11 +5,11 @@ import 'package:sigma/resources/colors.dart';
 import 'package:sigma/resources/text_styles.dart';
 
 class ProductItem extends BaseStatelessScreen{
-  String image;
-  String name;
-  int price;
-  int cashBack;
-  String place;
+  final String image;
+  final String name;
+  final int price;
+  final int cashBack;
+  final String place;
   ProductItem({
     @required this.image,
     @required this.name,
@@ -17,6 +17,7 @@ class ProductItem extends BaseStatelessScreen{
     @required this.cashBack,
     @required this.place,
   });
+
   @override
  Widget buildBody(BuildContext context){
     return Stack(

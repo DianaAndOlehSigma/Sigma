@@ -1,8 +1,10 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sigma/config/const_routes.dart';
 import 'package:sigma/core/ui/states/base_stateless_screen.dart';
-import 'package:sigma/view/bottom_nav_bar_sceens/product_detail_sceen.dart';
+import 'package:sigma/view/filter_product_screen.dart';
+import 'package:sigma/view/product_detail_sceen.dart';
 import 'package:sigma/view/widgets/main_categories.dart';
 import 'package:sigma/view/widgets/main_pie_chart_bar.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
@@ -94,7 +96,16 @@ class MainScreen extends BaseStatelessScreen{
                                         height: 30,
                                         width: 30,
                                       ),
-                                      Text(' Горячие предложения', style: style_12,)
+                                      Text(' Горячие предложения', style: style_12,),
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 30),
+                                        child: IconButton(
+                                          icon: Icon(Icons.filter_list_rounded, color: black, size: 30,),
+                                          onPressed: () {
+                                            Get.to(FilterProductScreen());
+                                          },
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -131,7 +142,8 @@ class MainScreen extends BaseStatelessScreen{
                                                                     name: name,
                                                                     price: price,
                                                                     cashBack: cashBack,
-                                                                    place: place),
+                                                                    place: place,
+                                                                ),
                                                               ),
                                                             );
                                                           }

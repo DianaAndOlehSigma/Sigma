@@ -1,17 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:sigma/core/ui/states/base_stateless_screen.dart';
 import 'package:sigma/resources/colors.dart';
 import 'package:sigma/resources/text_styles.dart';
-import '../models/category_icon_model.dart';
+import 'package:flutter/material.dart';
+import 'package:sigma/view/widgets/category_icon.dart';
 
 class MainCategories extends BaseStatelessScreen{
 
   final List<Widget> categories = [
-    categoryIconModel('assets/images/Clothes.png', purple, 'Одежда и украшения'),
-    categoryIconModel('assets/images/Beauty.png', orange, 'Красота и здоровье'),
-    categoryIconModel('assets/images/Travel.png', yellow, 'Путешествия'),
-    categoryIconModel('assets/images/MarketPlace.png', red, 'Маркетплейсы'),
-    categoryIconModel('assets/images/Delivery.png', darkPurple, 'Услуги'),
+    categoryIcon('assets/images/Clothes.png', purple, 'Одежда и украшения'),
+    categoryIcon('assets/images/Beauty.png', orange, 'Красота и здоровье'),
+    categoryIcon('assets/images/Travel.png',  yellow, 'Путешествия'),
+    categoryIcon('assets/images/MarketPlace.png', red, 'Маркетплейсы'),
+    categoryIcon('assets/images/Delivery.png', darkPurple, 'Услуги'),
+    categoryIcon('assets/images/Clothes.png', purple, 'Одежда и украшения'),
   ];
 
   @override

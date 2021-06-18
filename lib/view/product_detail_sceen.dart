@@ -104,13 +104,13 @@ class ProductDetailScreen extends BaseStatelessScreen{
             SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsets.only(right: 25.0, bottom: 15),
-              child: Container(
+              child:  Container(
                 height: 100,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: white1,
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(15)
+                    color: white1,
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(15)
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
